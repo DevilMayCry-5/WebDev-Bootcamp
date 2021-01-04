@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <!-- card image -->
+                        <div class="card-image">
+                            <figure class="image is-5by3">
+                                <img src="pp.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+
+                        <div class="card-content">
+                            <h1 class="title">Ping Pong Score Keeper</h1>
+                            <p class="subtitle">Click the buttons below to record score</p>
+
+                            <!-- score display -->
+                            <div class="content is-size-3">
+                                <h1><span id="p1Score">0</span> to <span id="p2Score">0</span> <span id="winner" class="is-size-5"></span></h1>
+                            </div>
+
+                            <!-- game score limit selector -->
+                            <label for="game" class="is-size-5 has-text-weight-medium">Playing to:</label>
+                            <div class="select is-rounded">
+                                <select name="game" id="game">
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- buttons -->
+                        <footer class="card-footer">
+                            <button id="p1Btn" class="button is-info card-footer-item">+1 Player One</button>
+                            <button id="p2Btn" class="button is-success card-footer-item">+1 Player Two</button>
+                            <button id="reset" class="button is-danger card-footer-item">Reset</button>
+                        </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- javascript below -->
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
