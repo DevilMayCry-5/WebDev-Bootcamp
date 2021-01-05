@@ -32,6 +32,7 @@ function updateScore(player, opponent) {
             if ((player.score === 5 && player.score === opponent.score)) {
                 player.display.classList.add('has-text-warning')
                 opponent.display.classList.add('has-text-warning')
+                winner.classList.add('notification')
                 winner.textContent = `Draw! Game now ends at 3`
                 setTimeout(reset, 3000)
             }
@@ -40,6 +41,7 @@ function updateScore(player, opponent) {
             isGameOver = true;
             player.display.classList.add('has-text-success')
             opponent.display.classList.add('has-text-danger')
+            winner.classList.add('notification', 'is-info', 'is-light')
             winner.textContent = `${player.name} WINS!!!`
             gameOverScore.value = 3
         }
@@ -51,6 +53,7 @@ function reset() {
     limit = 3
     isGameOver = false
     winner.textContent = ``
+    winner.classList.remove('notification')
     for (const p of [p1, p2]) {
         p.score = 0;
         p.display.textContent = 0;
